@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Konstantin Kotik — Head of AI, консультации по ИИ</title>
+<meta name="description" content="Константин Котик — Head of AI и GenAI Tech Lead. Консультации по внедрению ИИ, LLM, RAG и ИИ-агентам. Основатель LeoGPT и RallyMate.">
+<link rel="canonical" href="https://konstantinkotik.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://konstantinkotik.com/">
+<meta property="og:title" content="Konstantin Kotik — Head of AI">
+<meta property="og:description" content="Консультации по внедрению ИИ: LLM, RAG, ИИ-агенты. JustGPT 70B, LeoGPT 270 000+ регистраций, Kaggle Master.">
+<meta property="og:image" content="https://konstantinkotik.com/photo.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F4FE0'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='white' text-anchor='middle'%3EKK%3C/text%3E%3C/svg%3E">
+<style>html{-webkit-text-size-adjust:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one left-aligned editorial column; oversized display headline, mono "spec strip" of proof numbers, services as a 3-up grid that stacks on phones. */
+:root {
+  --bg: #F5F6F3;
+  --surface: #FFFFFF;
+  --fg: #111827;
+  --muted: #5A6373;
+  --line: #D9DDD6;
+  --accent: #1F4FE0;
+  --accent-ink: #FFFFFF;
+  --tint: #E8EDFB;
+  --display: "Unbounded", "Arial Black", sans-serif;
+  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1319; --surface: #161B23; --fg: #E7EAEF; --muted: #9AA3B0; --line: #2A3140;
+    --accent: #7AA2FF; --accent-ink: #0F1319; --tint: #1A2336; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1319; --surface: #161B23; --fg: #E7EAEF; --muted: #9AA3B0; --line: #2A3140;
+  --accent: #7AA2FF; --accent-ink: #0F1319; --tint: #1A2336; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 17px; line-height: 1.55; margin: 0; padding-inline: 20px; padding-block: 0 48px; }
+:root[data-lang="en"] .ru, :root:not([data-lang="en"]) .en { display: none; }
+a { color: var(--accent); text-decoration: none; }
+a:hover, a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.wrap { max-width: 1080px; margin: 0 auto; }
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.mark { font-family: var(--display); font-weight: 700; font-size: 15px; letter-spacing: .04em; color: var(--fg); }
+nav.main { display: flex; gap: 22px; flex-wrap: wrap; font-size: 15px; }
+nav.main a { color: var(--fg); }
+.lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; font-family: var(--mono); font-size: 12px; }
+.lang button { background: transparent; border: 0; color: var(--muted); padding: 6px 12px; cursor: pointer; font: inherit; }
+.lang button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(30px, 5.2vw, 58px); font-weight: 700; line-height: 1.08; letter-spacing: -.01em; }
+h2 { font-size: clamp(22px, 3vw, 32px); font-weight: 500; line-height: 1.15; }
+h3 { font-size: 18px; font-weight: 500; line-height: 1.3; }
+.hero { padding-block: 56px 40px; display: grid; gap: 22px; }
+.hero-top { display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: center; }
+.hero-text { display: grid; gap: 22px; min-width: 0; }
+.portrait { position: relative; justify-self: end; width: min(100%, 340px); aspect-ratio: 343 / 515; max-width: 100%; }
+.portrait::before { content: ""; position: absolute; inset: 18px -18px -18px 18px; background: var(--accent); border-radius: 14px; opacity: .9; }
+.portrait img { position: relative; display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 14px; }
+.status { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.status i { width: 8px; height: 8px; border-radius: 50%; background: #22A06B; box-shadow: 0 0 0 0 rgba(34,160,107,.5); }
+.ticker { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 44px; padding-block: 12px; }
+.ticker-track { display: flex; gap: 40px; width: max-content; font-family: var(--mono); font-size: 13px; color: var(--muted); white-space: nowrap; }
+.ticker-track span::before { content: "·"; color: var(--accent); margin-right: 40px; }
+@media (prefers-reduced-motion: no-preference) {
+  .status i { animation: pulse 2s infinite; }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(34,160,107,.5); } 70% { box-shadow: 0 0 0 9px rgba(34,160,107,0); } 100% { box-shadow: 0 0 0 0 rgba(34,160,107,0); } }
+  .ticker-track { animation: slide 48s linear infinite; }
+  @keyframes slide { to { transform: translateX(-50%); } }
+  .hero-text > *, .portrait { animation: rise .7s ease-out both; }
+  .hero-text > :nth-child(2) { animation-delay: .08s; } .hero-text > :nth-child(3) { animation-delay: .16s; } .hero-text > :nth-child(4) { animation-delay: .24s; } .portrait { animation-delay: .12s; }
+  @keyframes rise { from { opacity: .3; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  .card { transition: transform .18s ease, box-shadow .18s ease; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px -18px rgba(17,24,39,.45); }
+}
+.hero p.lead { font-size: 19px; max-width: 42rem; color: var(--muted); margin: 0; }
+.cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 12px 20px; border-radius: 6px; font-weight: 600; font-size: 15px; border: 1px solid var(--accent); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); }
+.btn.ghost { color: var(--accent); background: transparent; }
+.btn:hover { text-decoration: none; filter: brightness(1.08); }
+.spec { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--fg); border-bottom: 1px solid var(--line); margin-top: 14px; }
+.spec div { padding: 16px 14px 16px 0; border-right: 1px solid var(--line); min-width: 0; }
+.spec div:last-child { border-right: 0; }
+.spec div + div { padding-left: 14px; }
+.spec b { display: block; font-family: var(--mono); font-weight: 500; font-size: 26px; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.spec span { display: block; font-size: 13px; color: var(--muted); margin-top: 4px; line-height: 1.35; }
+section { padding-block: 56px 0; }
+.sec-head { display: grid; gap: 8px; margin-bottom: 28px; max-width: 46rem; }
+.sec-head p { margin: 0; color: var(--muted); }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 22px; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.card .meta { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.card ul { margin: 0; padding-left: 18px; color: var(--fg); font-size: 15px; display: grid; gap: 6px; }
+.card .price { font-family: var(--mono); font-size: 13px; color: var(--muted); margin-top: auto; padding-top: 6px; border-top: 1px dashed var(--line); }
+.track { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: 150px 1fr; gap: 18px; padding-block: 18px; border-bottom: 1px solid var(--line); }
+.row .when { font-family: var(--mono); font-size: 13px; color: var(--muted); padding-top: 3px; }
+.row h3 { margin-bottom: 4px; }
+.row p { margin: 0; color: var(--muted); font-size: 15px; max-width: 46rem; }
+.proj { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.proj .card { gap: 8px; }
+.proj .card p { margin: 0; color: var(--muted); font-size: 15px; }
+.tag { display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; background: var(--tint); color: var(--accent); padding: 3px 8px; border-radius: 4px; }
+.recog { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 32px; padding: 0; margin: 0; list-style: none; }
+.recog li { padding-left: 16px; position: relative; font-size: 15px; }
+.recog li::before { content: ""; position: absolute; left: 0; top: .6em; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; }
+.soon { background: var(--tint); border-radius: 10px; padding: 22px; display: grid; gap: 8px; }
+.soon p { margin: 0; }
+.contact { border-top: 1px solid var(--fg); padding-top: 28px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; }
+.contact p { margin: 0 0 12px; color: var(--muted); }
+.chan { display: grid; gap: 10px; font-size: 15px; }
+.chan .k { font-family: var(--mono); font-size: 12px; color: var(--muted); display: block; }
+.copy { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.copy code { font-family: var(--mono); font-size: 14px; background: var(--surface); border: 1px solid var(--line); padding: 4px 8px; border-radius: 4px; user-select: all; }
+.copy button { font: inherit; font-size: 13px; background: transparent; border: 1px solid var(--line); border-radius: 4px; padding: 4px 10px; cursor: pointer; color: var(--fg); }
+footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 760px) {
+  .spec { grid-template-columns: repeat(2, 1fr); }
+  .spec div:nth-child(2) { border-right: 0; }
+  .spec div:nth-child(3) { padding-left: 0; border-top: 1px solid var(--line); }
+  .spec div:nth-child(4) { border-top: 1px solid var(--line); }
+  .grid3, .proj, .recog, .contact, .hero-top { grid-template-columns: 1fr; }
+  .portrait { justify-self: start; width: min(100%, 260px); }
+  .row { grid-template-columns: 1fr; gap: 4px; }
+  nav.main { gap: 14px; font-size: 14px; }
+}
+@media (prefers-reduced-motion: no-preference) { .btn { transition: filter .15s; } }
+</style>
+
+<div class="wrap">
+<header class="top">
+  <a class="mark" href="#top">KONSTANTIN KOTIK</a>
+  <nav class="main" aria-label="Sections">
+    <a href="#services"><span class="ru">Услуги</span><span class="en">Services</span></a>
+    <a href="#track"><span class="ru">Опыт</span><span class="en">Track record</span></a>
+    <a href="#projects"><span class="ru">Проекты</span><span class="en">Projects</span></a>
+    <a href="#contact"><span class="ru">Контакты</span><span class="en">Contact</span></a>
+  </nav>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" id="lang-ru" aria-pressed="true">RU</button>
+    <button type="button" id="lang-en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-top">
+    <div class="hero-text">
+      <div class="eyebrow">
+        <span class="ru">Head of AI · GenAI Tech Lead · работаю удалённо по всему миру</span>
+        <span class="en">Head of AI · GenAI Tech Lead · working remotely worldwide</span>
+      </div>
+      <h1>
+        <span class="ru">Помогаю компаниям внедрять ИИ, который работает в продакшене.</span>
+        <span class="en">I help companies ship AI that works in production.</span>
+      </h1>
+      <p class="lead">
+        <span class="ru">Девять лет довожу модели от исследования до продакшена: LLM, RAG, ИИ-агенты. Консультирую основателей, CTO и инженерные команды. Сам строю продукты: LeoGPT, RallyMate.</span>
+        <span class="en">Nine years taking models from research to production: LLMs, RAG, AI agents. I advise founders, CTOs and engineering teams, and I build products of my own: LeoGPT, RallyMate.</span>
+      </p>
+      <div>
+        <div class="cta">
+          <a class="btn primary" href="#contact"><span class="ru">Записаться на консультацию</span><span class="en">Book a consultation</span></a>
+          <a class="btn ghost" href="#projects"><span class="ru">Смотреть проекты</span><span class="en">See projects</span></a>
+        </div>
+        <div class="status"><i aria-hidden="true"></i><span class="ru">Открыт к новым проектам</span><span class="en">Open to new projects</span></div>
+      </div>
+    </div>
+    <figure class="portrait" style="margin:0">
+      <img src="photo.jpg" alt="Konstantin Kotik" width="343" height="515">
+    </figure>
+  </div>
+  <div class="spec" aria-label="Key numbers">
+    <div><b>70B</b><span class="ru">параметров в JustGPT, запуск которого я вёл</span><span class="en">parameters in JustGPT, the LLM launch I led</span></div>
+    <div><b>270 000+</b><span class="ru">регистраций в LeoGPT, моём ИИ-продукте</span><span class="en">registrations in LeoGPT, my AI product</span></div>
+    <div><b>10 / 4 550</b><span class="ru">место на Kaggle, золотая медаль</span><span class="en">place on Kaggle, gold medal</span></div>
+    <div><b>2020–2026</b><span class="ru">преподавал основы ИИ и NLP в МГУ</span><span class="en">taught AI and NLP at Moscow State University</span></div>
+  </div>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>GPT</span><span>Claude</span><span>Gemini</span><span>Google ADK</span><span>RAG</span><span>AI Agents</span><span>PyTorch</span><span>HuggingFace</span><span>FastAPI</span><span>Docker</span><span>AWS SageMaker</span><span>GCP</span><span>ClickHouse</span><span>PySpark</span><span>Kaggle Master</span><span>Telegram Bots</span>
+      <span>GPT</span><span>Claude</span><span>Gemini</span><span>Google ADK</span><span>RAG</span><span>AI Agents</span><span>PyTorch</span><span>HuggingFace</span><span>FastAPI</span><span>Docker</span><span>AWS SageMaker</span><span>GCP</span><span>ClickHouse</span><span>PySpark</span><span>Kaggle Master</span><span>Telegram Bots</span>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="sec-head">
+    <div class="eyebrow"><span class="ru">Услуги</span><span class="en">Services</span></div>
+    <h2><span class="ru">Три формата. Один результат: ИИ, который приносит деньги, а не слайды.</span><span class="en">Three formats. One outcome: AI that earns money instead of filling slides.</span></h2>
+    <p><span class="ru">Работаю с компаниями из России и других стран. Оплата картой РФ, по СБП или по счёту.</span><span class="en">I work with companies in Russia and worldwide. Payment by card, SBP or invoice.</span></p>
+  </div>
+  <div class="grid3">
+    <div class="card">
+      <div class="meta"><span class="ru">Для бизнеса · 2 недели</span><span class="en">For companies · 2 weeks</span></div>
+      <h3><span class="ru">ИИ-аудит и дорожная карта</span><span class="en">AI audit and roadmap</span></h3>
+      <ul>
+        <li><span class="ru">Аудит продукта, данных и процессов</span><span class="en">Audit of your product, data and processes</span></li>
+        <li><span class="ru">Карта сценариев с оценкой эффекта и стоимости владения</span><span class="en">Use-case map with impact and cost of ownership</span></li>
+        <li><span class="ru">Архитектура ИИ-слоя и прототип приоритетного сценария</span><span class="en">Architecture of the AI layer and a prototype of the top use case</span></li>
+      </ul>
+      <div class="price"><span class="ru">Стоимость: по запросу</span><span class="en">Pricing: on request</span></div>
+    </div>
+    <div class="card">
+      <div class="meta"><span class="ru">Для команд · 90 минут</span><span class="en">For teams · 90 minutes</span></div>
+      <h3><span class="ru">Архитектурная сессия</span><span class="en">Architecture session</span></h3>
+      <ul>
+        <li><span class="ru">Разбор вашей LLM-, RAG- или агентной системы</span><span class="en">Review of your LLM, RAG or agent system</span></li>
+        <li><span class="ru">Качество, стоимость запроса, надёжность в продакшене</span><span class="en">Quality, cost per request, production reliability</span></li>
+        <li><span class="ru">План на 30 дней с конкретными шагами</span><span class="en">A 30-day plan with concrete steps</span></li>
+      </ul>
+      <div class="price"><span class="ru">Стоимость: по запросу</span><span class="en">Pricing: on request</span></div>
+    </div>
+    <div class="card">
+      <div class="meta"><span class="ru">Для инженеров · 60 минут</span><span class="en">For engineers · 60 minutes</span></div>
+      <h3><span class="ru">Менторство один на один</span><span class="en">One-on-one mentoring</span></h3>
+      <ul>
+        <li><span class="ru">Переход в LLM-разработку и ИИ-агенты</span><span class="en">Moving into LLM engineering and AI agents</span></li>
+        <li><span class="ru">Разбор вашего проекта, кода и резюме</span><span class="en">Review of your project, code and CV</span></li>
+        <li><span class="ru">Подготовка к собеседованиям на AI-роли</span><span class="en">Preparation for AI-role interviews</span></li>
+      </ul>
+      <div class="price"><span class="ru">Стоимость: по запросу</span><span class="en">Pricing: on request</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="track">
+  <div class="sec-head">
+    <div class="eyebrow"><span class="ru">Опыт</span><span class="en">Track record</span></div>
+    <h2><span class="ru">Что я построил и что это дало</span><span class="en">What I built and what it delivered</span></h2>
+  </div>
+  <div class="track">
+    <div class="row"><div class="when">2025 —</div><div><h3>Clarity · GenAI Tech Lead</h3><p><span class="ru">ИИ-агент поддержки клиентов на Google ADK с RAG. В продакшене.</span><span class="en">Customer-support AI agent on Google ADK with RAG. In production.</span></p></div></div>
+    <div class="row"><div class="when">2021 — 2023</div><div><h3>Just AI · Head of NLP R&amp;D</h3><p><span class="ru">Обучили и запустили JustGPT на 70 млрд параметров, третью LLM такого масштаба в России. Классификатор интентов ускорили в 46 раз. Модель восстановления пунктуации поставлена on-premise крупному телеком-оператору.</span><span class="en">Trained and launched JustGPT, a 70B-parameter LLM, the third of that scale in Russia. Sped up the intent classifier 46×. Delivered a punctuation-restoration model on-premise to a major telecom operator.</span></p></div></div>
+    <div class="row"><div class="when">2021 — 2023</div><div><h3>Upwork Inc. · Senior ML Engineer</h3><p><span class="ru">Модель семантического матчинга для 40 млн фрилансеров: +20% релевантных кандидатов. Миграция ML с Databricks на SageMaker.</span><span class="en">Semantic matching model for 40M freelancers: +20% relevant candidates. Led the ML migration from Databricks to SageMaker.</span></p></div></div>
+    <div class="row"><div class="when">2023 — 2024</div><div><h3>Pygma.me · Head of AI</h3><p><span class="ru">Мультиагентный ассистент для создания контента на данных Instagram. Продукт дня №1 на Product Hunt.</span><span class="en">Multi-agent assistant for content creation on Instagram data. #1 Product of the Day on Product Hunt.</span></p></div></div>
+    <div class="row"><div class="when">2023</div><div><h3>Bidease · Senior ML Engineer</h3><p><span class="ru">Антифрод-система: +50 000 $ выручки в месяц.</span><span class="en">Anti-fraud system: +$50,000 in monthly revenue.</span></p></div></div>
+    <div class="row"><div class="when">2017 — 2020</div><div><h3><span class="ru">Банки и телеком</span><span class="en">Banking and telecom</span></h3><p><span class="ru">Кредитный скоринг для ВТБ и Билайна; модель прогноза отзыва банковских лицензий в Deloitte, внедрена в госкомпании.</span><span class="en">Credit scoring at VTB Bank and Beeline; a bank-licence revocation model at Deloitte, deployed by a state company.</span></p></div></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="sec-head">
+    <div class="eyebrow"><span class="ru">Проекты</span><span class="en">Projects</span></div>
+    <h2><span class="ru">Продукты, которые я основал и веду</span><span class="en">Products I founded and run</span></h2>
+  </div>
+  <div class="proj">
+    <div class="card">
+      <span class="tag">2023 — </span>
+      <h3><a href="https://leogpt.ru">LeoGPT</a></h3>
+      <p><span class="ru">ИИ-экосистема в Telegram и вебе: чат, генерация изображений и видео, аудио, анализ документов. 100+ ИИ-возможностей в одном продукте, 270 000+ регистраций. Построил с нуля без инвестиций.</span><span class="en">AI ecosystem in Telegram and on the web: chat, image and video generation, audio, document analysis. 100+ AI capabilities in one product, 270,000+ registrations. Bootstrapped from zero.</span></p>
+    </div>
+    <div class="card">
+      <span class="tag">LeoGPT Studio</span>
+      <h3><span class="ru">Карточки для Wildberries и Ozon</span><span class="en">Product cards for marketplaces</span></h3>
+      <p><span class="ru">Сервис делает из фото товара обложку, инфографику с характеристиками и сцену в интерьере. Серии карточек в одном стиле за минуты.</span><span class="en">Turns a product photo into a cover, a spec infographic and a lifestyle scene. Whole card series in one style in minutes.</span></p>
+    </div>
+    <div class="card">
+      <span class="tag">Web · PWA · iOS · Android</span>
+      <h3><a href="https://rallymate.ru">RallyMate</a></h3>
+      <p><span class="ru">Приложение для теннисистов: подбор партнёров по уровню, району и возрасту, ИИ-подбор, открытые игры и чаты, тренеры, бронирование кортов, турниры и кэмпы.</span><span class="en">An app for tennis players: partner matching by level, district and age, AI matching, open games and chats, coaches, court booking, tournaments and camps.</span></p>
+    </div>
+    <div class="card">
+      <span class="tag">2020 — 2021</span>
+      <h3>Agently</h3>
+      <p><span class="ru">Сооснователь. Автоматизация маркетинга недвижимости: 1 300+ пользователей, 61 платящий клиент, раунды pre-seed и seed.</span><span class="en">Co-founder. Real-estate marketing automation: 1,300+ users, 61 paying customers, pre-seed and seed rounds raised.</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="recognition">
+  <div class="sec-head">
+    <div class="eyebrow"><span class="ru">Преподавание и признание</span><span class="en">Teaching and recognition</span></div>
+    <h2><span class="ru">Чем подтверждаю экспертизу</span><span class="en">What backs the expertise</span></h2>
+  </div>
+  <ul class="recog">
+    <li><span class="ru">Преподаватель основ ИИ и NLP в МГУ им. Ломоносова, 2020–2026</span><span class="en">Lecturer in AI and NLP at Lomonosov Moscow State University, 2020–2026</span></li>
+    <li><span class="ru">Kaggle Competitions Master: золото, 10-е место из 4 550 команд</span><span class="en">Kaggle Competitions Master: gold, 10th of 4,550 teams</span></li>
+    <li><span class="ru">Победитель международного хакатона HackUPC 2018 (700 участников)</span><span class="en">Winner of the HackUPC 2018 international hackathon (700 participants)</span></li>
+    <li><span class="ru">Спикер Яндекса по машинному обучению, регулярные выступления на конференциях</span><span class="en">ML speaker at Yandex, regular conference talks</span></li>
+    <li><span class="ru">ML-советник НМИЦ нейрохирургии им. Бурденко: модель на 101 654 протоколах операций</span><span class="en">ML research advisor at the Burdenko Neurosurgery Center: a model built on 101,654 operative reports</span></li>
+    <li><span class="ru">Публикация в Scopus, контрибьютор HuggingFace</span><span class="en">Scopus-indexed paper, HuggingFace contributor</span></li>
+    <li><span class="ru">МГУ с отличием (4,85 из 5), «Физико-математические методы управления»</span><span class="en">MSU with honours (4.85/5), Physical and Mathematical Methods of Control</span></li>
+    <li><span class="ru">ИИ-стратегия для 1forma.ru под вход в Сколково</span><span class="en">AI strategy for 1forma.ru to enter the Skolkovo fund</span></li>
+  </ul>
+</section>
+
+<section id="course">
+  <div class="soon">
+    <div class="eyebrow"><span class="ru">Скоро</span><span class="en">Coming soon</span></div>
+    <h3><span class="ru">Практический курс по ИИ-агентам</span><span class="en">A hands-on course on AI agents</span></h3>
+    <p><span class="ru">От первого промпта до агента в продакшене. Анонс и ранний доступ выйдут в моём Telegram-канале <a href="https://t.me/urgent_ai">@urgent_ai</a>.</span><span class="en">From the first prompt to an agent in production. The announcement and early access will appear in my Telegram channel <a href="https://t.me/urgent_ai">@urgent_ai</a>.</span></p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <div>
+      <div class="eyebrow"><span class="ru">Контакты</span><span class="en">Contact</span></div>
+      <h2 style="margin-block:8px 12px"><span class="ru">Напишите, с чего хотите начать</span><span class="en">Tell me where you want to start</span></h2>
+      <p><span class="ru">Опишите задачу в двух-трёх предложениях. Отвечу в течение рабочего дня и предложу формат.</span><span class="en">Describe the task in two or three sentences. I reply within one business day and suggest a format.</span></p>
+    </div>
+    <div class="chan">
+      <div><span class="k">Email</span><span class="copy"><code id="email">kotikkonstantin@yandex.ru</code><button type="button" id="copy-email"><span class="ru">Скопировать</span><span class="en">Copy</span></button></span></div>
+      <div><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/konstantin-kotik/">linkedin.com/in/konstantin-kotik</a></div>
+      <div><span class="k">Telegram</span><a href="https://t.me/urgent_ai">t.me/urgent_ai</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Konstantin Kotik</span>
+  <span><span class="ru">Работаю удалённо</span><span class="en">Working remotely</span></span>
+</footer>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var saved = null;
+  try { saved = localStorage.getItem('kk-lang'); } catch (e) {}
+  var lang = saved || ((navigator.language || '').toLowerCase().indexOf('ru') === 0 ? 'ru' : 'en');
+  function setLang(l) {
+    lang = l;
+    root.setAttribute('data-lang', l);
+    root.lang = l;
+    document.getElementById('lang-ru').setAttribute('aria-pressed', String(l === 'ru'));
+    document.getElementById('lang-en').setAttribute('aria-pressed', String(l === 'en'));
+    try { localStorage.setItem('kk-lang', l); } catch (e) {}
+  }
+  setLang(lang);
+  document.getElementById('lang-ru').addEventListener('click', function () { setLang('ru'); });
+  document.getElementById('lang-en').addEventListener('click', function () { setLang('en'); });
+
+  var btn = document.getElementById('copy-email');
+  var code = document.getElementById('email');
+  btn.addEventListener('click', function () {
+    var text = code.textContent;
+    var done = function () { btn.textContent = lang === 'ru' ? 'Скопировано' : 'Copied'; setTimeout(function () { btn.innerHTML = '<span class="ru">Скопировать</span><span class="en">Copy</span>'; }, 1500); };
+    var fallback = function () { var r = document.createRange(); r.selectNodeContents(code); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else { fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>
